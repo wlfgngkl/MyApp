@@ -1,0 +1,87 @@
+<%= form_with(model: client, local: true) do |form| %>
+  <% if client.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(client.errors.count, "error") %> prohibited this client from being saved:</h2>
+
+      <ul>
+      <% client.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :[firstname %>
+    <%= form.text_field :[firstname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :[ %>
+    <%= form.text_field :[ %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lastname %>
+    <%= form.text_field :lastname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :[ %>
+    <%= form.text_field :[ %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dob %>
+    <%= form.text_field :dob %>
+  </div>
+
+  <div class="field">
+    <%= form.label :[ %>
+    <%= form.text_field :[ %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gender %>
+    <%= form.text_field :gender %>
+  </div>
+
+  <div class="field">
+    <%= form.label :[ %>
+    <%= form.text_field :[ %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :[ %>
+    <%= form.text_field :[ %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :[ %>
+    <%= form.text_field :[ %>
+  </div>
+
+  <div class="field">
+    <%= form.label :notifications %>
+    <%= form.text_field :notifications %>
+  </div>
+
+  <div class="field">
+    <%= form.label :[ %>
+    <%= form.text_field :[ %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
