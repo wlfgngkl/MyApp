@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ClienTsControllerTest < ActionDispatch::IntegrationTest
+class ClientsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @client = clients(:one)
   end
@@ -17,7 +17,7 @@ class ClienTsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create client" do
     assert_difference('Client.count') do
-      post clients_url, params: { client: { [: @client.[, [firstname: @client.[firstname, dob: @client.dob, email: @client.email, gender: @client.gender, lastname: @client.lastname, notifications: @client.notifications, phone: @client.phone } }
+      post clients_url, params: { client: { dob: @client.dob, email: @client.email, firstname: @client.firstname, gender: @client.gender, lastname: @client.lastname, notifications: @client.notifications, phone: @client.phone } }
     end
 
     assert_redirected_to client_url(Client.last)
@@ -34,7 +34,7 @@ class ClienTsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update client" do
-    patch client_url(@client), params: { client: { [: @client.[, [firstname: @client.[firstname, dob: @client.dob, email: @client.email, gender: @client.gender, lastname: @client.lastname, notifications: @client.notifications, phone: @client.phone } }
+    patch client_url(@client), params: { client: { dob: @client.dob, email: @client.email, firstname: @client.firstname, gender: @client.gender, lastname: @client.lastname, notifications: @client.notifications, phone: @client.phone } }
     assert_redirected_to client_url(@client)
   end
 

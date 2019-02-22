@@ -1,4 +1,4 @@
-class ClienTsController < ApplicationController
+class ClientsController < ApplicationController
   before_action :set_client, only: [:show, :edit, :update, :destroy]
 
   # GET /clients
@@ -69,6 +69,6 @@ class ClienTsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def client_params
-      params.require(:client).permit(:[firstname, :[, :lastname, :[, :dob, :[, :gender, :[, :email, :[, :phone, :[, :notifications, :[)
+      params.require(:client).permit(:firstname, :lastname, :dob, :gender, :email, :phone, :notifications)
     end
 end

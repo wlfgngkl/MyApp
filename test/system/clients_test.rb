@@ -14,10 +14,9 @@ class ClientsTest < ApplicationSystemTestCase
     visit clients_url
     click_on "New Client"
 
-    fill_in "[", with: @client.[
-    fill_in "[firstname", with: @client.[firstname
     fill_in "Dob", with: @client.dob
     fill_in "Email", with: @client.email
+    fill_in "Firstname", with: @client.firstname
     fill_in "Gender", with: @client.gender
     fill_in "Lastname", with: @client.lastname
     fill_in "Notifications", with: @client.notifications
@@ -32,10 +31,9 @@ class ClientsTest < ApplicationSystemTestCase
     visit clients_url
     click_on "Edit", match: :first
 
-    fill_in "[", with: @client.[
-    fill_in "[firstname", with: @client.[firstname
     fill_in "Dob", with: @client.dob
     fill_in "Email", with: @client.email
+    fill_in "Firstname", with: @client.firstname
     fill_in "Gender", with: @client.gender
     fill_in "Lastname", with: @client.lastname
     fill_in "Notifications", with: @client.notifications

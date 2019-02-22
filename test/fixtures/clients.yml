@@ -1,33 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  [firstname: MyString
-  [: 
+  firstname: MyString
   lastname: MyString
-  [: 
-  dob: MyString
-  [: 
+  dob: 2019-02-22
   gender: MyString
-  [: 
   email: MyString
-  [: 
   phone: MyString
-  [: 
-  notifications: MyString
-  [: 
+  notifications: MyText
 
 two:
-  [firstname: MyString
-  [: 
+  firstname: MyString
   lastname: MyString
-  [: 
-  dob: MyString
-  [: 
+  dob: 2019-02-22
   gender: MyString
-  [: 
   email: MyString
-  [: 
   phone: MyString
-  [: 
-  notifications: MyString
-  [: 
+  notifications: MyText

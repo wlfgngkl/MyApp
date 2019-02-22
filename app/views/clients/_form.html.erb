@@ -12,13 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :[firstname %>
-    <%= form.text_field :[firstname %>
-  </div>
-
-  <div class="field">
-    <%= form.label :[ %>
-    <%= form.text_field :[ %>
+    <%= form.label :firstname %>
+    <%= form.text_field :firstname %>
   </div>
 
   <div class="field">
@@ -27,18 +22,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :[ %>
-    <%= form.text_field :[ %>
-  </div>
-
-  <div class="field">
     <%= form.label :dob %>
-    <%= form.text_field :dob %>
-  </div>
-
-  <div class="field">
-    <%= form.label :[ %>
-    <%= form.text_field :[ %>
+    <%= form.date_select :dob %>
   </div>
 
   <div class="field">
@@ -47,18 +32,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :[ %>
-    <%= form.text_field :[ %>
-  </div>
-
-  <div class="field">
     <%= form.label :email %>
     <%= form.text_field :email %>
-  </div>
-
-  <div class="field">
-    <%= form.label :[ %>
-    <%= form.text_field :[ %>
   </div>
 
   <div class="field">
@@ -67,18 +42,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :[ %>
-    <%= form.text_field :[ %>
-  </div>
-
-  <div class="field">
     <%= form.label :notifications %>
-    <%= form.text_field :notifications %>
-  </div>
-
-  <div class="field">
-    <%= form.label :[ %>
-    <%= form.text_field :[ %>
+    <%= form.text_area :notifications %>
   </div>
 
   <div class="actions">
