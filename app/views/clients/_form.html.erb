@@ -11,42 +11,47 @@
     </div>
   <% end %>
 <div class="container">
-  <div class="field">
-    <%= form.label :firstname %>
-    <%= form.text_field :firstname %>
+  <div class="form-group">
+    <%= form.label :firstname %> 
+   <input type="text" class="form-control" <%= form.text_field :firstname %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :lastname %>
-    <%= form.text_field :lastname %>
+   <input type="text" class="form-control" <%= form.text_field :lastname %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :dob %>
+    <input type="date_select" class="form-control"
     <%= form.date_select :dob %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :gender %>
+    <input type="text" class="form-control"
     <%= form.text_field :gender %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :email %>
+    <input type="text" class="form-control"
     <%= form.text_field :email %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :phone %>
+    <input type="text" class="form-control"
     <%= form.text_field :phone %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :notifications %>
+    <input type="text_area" class="form-control" rows="3"
     <%= form.text_area :notifications %>
   </div>
 
-  <div class="actions">
+  <div class="form-group">
     <%= form.submit %>
   </div>
 <% end %>
