@@ -204,6 +204,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   chromedriver-helper
   jbuilder (~> 2.5)
+  jquery-rails
   listen (>= 3.0.5, < 3.2)
   mini_racer
   pg (>= 0.18, < 2.0)
