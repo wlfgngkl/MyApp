@@ -16,32 +16,29 @@
         <div class="row">
          <div class="form-group col-xs-2">
         <%= form.label :gender %> 
-        <%= form.select :gender,[["Herr","männlich"],["Frau","weiblich"]],{}, class: "form-control"%>
+        <%= form.select :gender,[["Herr","m"],["Frau","f"]],{}, class: "form-control"%>
          </div>
-        
+         <div class="row">
          <div class=" form-group col-xs-6">
         <%= form.label :firstname %> 
         <%= form.text_field :firstname, class: "form-control" %>
          </div>
         </div>
-      
-      <div class="form-group">
+         
         <div class="row">
-         <div class="col-xs-5">
+        <div class="form-group col-xs-7">
         <%= form.label :lastname, class: "control-label"%>
         <%= form.text_field :lastname, class: "form-control"%>
          </div>
         </div>
-      </div>    
 
-      <div class="form-group">
-        <div class="row">
-         <div class="col-xs-3">
+      <div class="row">
+      <div class="form-group col-xs-3">
         <%= form.label :dob %>
         <%= form.date_field :dob, class: "form-control"%>
          </div>
         </div>
-      </div>    
+
 
       
         <div class="row">
@@ -51,32 +48,27 @@
            
             <div class="input-group-addon">@</div>
              <%= form.text_field :email, class: "form-control" %>
-        
-       
          </div>
         </div>
-      </div>    
 
-      <div class="form-group">
-        <div class="row">
-         <div class="col-xs-5">
+      <div class="row">
+      <div class="form-group col-xs-5">
         <%= form.label :phone %>
         <%= form.text_field :phone, class: "form-control"%>
          </div>
         </div>
-      </div>    
 
-      <div class="form-group">
-        <div class="row">
-         <div class="col-xs-5">
+      <div class="row">
+      <div class="form-group col-xs-5">
         <%= form.label :notifications %>
         <%= form.text_area :notifications, class: "form-control" %>
          </div>
         </div>
-      </div>    
 
-      <div class="form-group">
+       <div class="row">
+      <div class="form-group col-xs-8">
         <%= form.submit "Send", class: "btn btn-success"%>
       </div>
+    </div>
     <% end %>
 </div>

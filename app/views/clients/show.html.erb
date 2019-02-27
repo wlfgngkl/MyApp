@@ -1,40 +1,59 @@
 
 <p id="notice"><%= notice %></p>
 
+<h1 class="<%= @client.gender_class %>">Hallo <%= @client.title %> <%= @client.lastname %></h1>
+
+<h2>Ihre Daten:</h2>
+
+<div class="container">
 <p>
-  <strong>Firstname:</strong>
+  <strong>Anrede:</strong>
+  <%= @client.title %>
+</p>
+
+<p>
+  <strong>Vorname:</strong>
   <%= @client.firstname %>
 </p>
 
 <p>
-  <strong>Lastname:</strong>
+  <strong>Nachname:</strong>
   <%= @client.lastname %>
 </p>
 
 <p>
-  <strong>Dob:</strong>
-  <%= @client.dob %>
+  <strong>Geburtsdatum:</strong>
+  <%= @client.date_of_birth %>
 </p>
 
-<p>
-  <strong>Gender:</strong>
-  <%= @client.gender %>
-</p>
+
 
 <p>
   <strong>Email:</strong>
   <%= @client.email %>
 </p>
 
+<% if @client.phone.present? %>
+
 <p>
-  <strong>Phone:,</strong>
+  <strong>Telefon:,</strong>
   <%= @client.phone %>
 </p>
 
-<p>
-  <strong>Notifications:</strong>
+<% end %>
+
+<% if @client.notifications.present? %>
+
+<p >
+  <strong>Ihre Nachricht:</strong>
   <%= @client.notifications %>
 </p>
 
-<%= link_to 'Edit', edit_client_path(@client) %> |
-<%= link_to 'Back', clients_path %>
+<% end %>
+
+<%= link_to 'Ihre Daten bearbeiten', edit_client_path(@client) %> 
+
+</div>
+<br/>
+
+<%= link_to raw('Zur&uuml;ck'), clients_path %>
