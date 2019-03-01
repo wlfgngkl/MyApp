@@ -32,8 +32,16 @@ validates :firstname, :lastname, presence: {message: "Cant be blank!"}
  def month_names_ge(month)
  	months = ["Januar",
  						"Februar",
- 						"M&auml;rz"
-
+ 						"M&auml;rz",
+ 						"April",
+ 						"Mai",
+ 						"Juni",
+ 						"Juli",
+ 						"August",
+ 						"September",
+ 						"Oktober",
+ 						"November",
+ 						"Dezember"
  	]
 
  	return months[month-1]
