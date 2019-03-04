@@ -15,3 +15,13 @@
 //= require jquery
 //= require bootstrap-sprockets
 
+$(document).ready(function(e) {
+	$(".rowlink").on('click', function(e) {
+    var client_path = $(this).attr('id')
+    var location = window.location;
+    var protocol = location.protocol;
+    var host = location.host;
+    var clientLocation = protocol + "//" + host + client_path;
+    window.location.href = clientLocation;
+  })
+})

@@ -20,7 +20,7 @@
 
 
       <% @clients.each do |client| %>
-        <tr id="<%= client.id %>" class= "rowlink">
+        <tr id="<%= client_path(client) %>" class= "rowlink">
           <td><%= client.title %></td>
           <td><%= client.fullname %></td>
           <td><%= client.date_of_birth %></td>
@@ -43,13 +43,3 @@
 
 
 
-<script type="text/javascript">
-  
-  $(".rowlink").on('click', function(e) {
-    var id = $(this).attr('id')
-    var url = window.location.href;
-    var clientLocation = url + "/" + id;
-    window.location.href = clientLocation;
-  })
-
-</script>

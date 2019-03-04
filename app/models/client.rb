@@ -20,9 +20,9 @@ validates :firstname, :lastname, presence: {message: "Cant be blank!"}
 
  def gender_class
  	if gender.eql? "m"
-			"mister-blue"
+			"mister"
 		else
-			"pink-lady"		
+			"lady"		
 		end
  end
 

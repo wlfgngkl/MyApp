@@ -2,8 +2,6 @@
 
 module Fake
 
-	
-
 
 	def firstname(gender=nil)
 		translate = {
