@@ -2,6 +2,7 @@ class Client < ApplicationRecord
 
 validates :firstname, :lastname, presence: {message: "Cant be blank!"}
 
+
  def fullname
 	"#{firstname.capitalize} #{lastname.capitalize}"
  end
