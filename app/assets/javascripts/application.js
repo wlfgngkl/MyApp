@@ -23,34 +23,30 @@ $(document).ready(function(e) {
     var host = location.host;
     var clientLocation = protocol + "//" + host + client_path;
     window.location.href = clientLocation;
-  })
 });
 
-$(document).ready(function() {
-  $('#form-group').submit(function(e) {
-    e.preventDefault();
-    var firstname = $('#firstname').val();
-    var lastname = $('#lastname').val();
-    var email = $('#email').val();
+//$(document).ready(function() {
+//  $('#form-group').submit(function(e) {
+//    e.preventDefault();
+//    var firstname = $('#firstname').val();
+//    var lastname = $('#lastname').val();
+//    var email = $('#email').val();
 
-    $(".error").remove();
+//    $(".error").remove();
 
-    if (firstname.length < 1) {
-      $('#firstname').after('<span class="error">This field is required</span>');
-    }
-    if (lastname.length < 1) {
-      $('#lastname').after('<span class="error">This field is required</span>');
-    }
-    if (email.length < 1) {
-      $('#email').after('<span class="error">This field is required</span>');
-    } else {
-      var regEx = /^[A-Z0-9][A-Z0-9._%+-]{0,63}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/;
-      var validEmail = regEx.test(email);
-      if (!validEmail) {
-        $('#email').after('<span class="error">Enter a valid email</span>');
-      }
-    }
-  }
-})
-
-
+//    if (firstname.length < 1) {
+//      $('#firstname').after('<span class="error">This field is required</span>');
+//    }
+//    if (lastname.length < 1) {
+//      $('#lastname').after('<span class="error">This field is required</span>');
+//    }
+//    if (email.length < 1) {
+//      $('#email').after('<span class="error">This field is required</span>');
+//    } else {
+//      var regEx = /^[A-Z0-9][A-Z0-9._%+-]{0,63}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/;
+//      var validEmail = regEx.test(email);
+//      if (!validEmail) {
+//        $('#email').after('<span class="error">Enter a valid email</span>');
+//      }
+//   }
+});
