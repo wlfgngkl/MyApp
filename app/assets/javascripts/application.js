@@ -17,12 +17,12 @@
 
 $(document).ready(function(e) {
 	$(".rowlink").on('click', function(e) {
-    var client_path = $(this).attr('id')
+    var link_path = $(this).attr('data-path')
     var location = window.location;
     var protocol = location.protocol;
     var host = location.host;
-    var clientLocation = protocol + "//" + host + client_path;
-    window.location.href = clientLocation;
+    var newLocation = protocol + "//" + host + link_path;
+    window.location.href = newLocation;
 })
 
 });

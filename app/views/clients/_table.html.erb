@@ -1,0 +1,32 @@
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Anrede: </th>
+        <th>Name: </th>
+        <th>Geburtsdatum: </th>
+       
+        <th>Email: </th>
+        
+      </tr>
+    </thead>
+
+    <tbody>
+
+
+
+      <% @clients.each do |client| %>
+        <tr data-path="/clients/<%= client.id %>" class= "rowlink">
+          <td><%= client.title %></td>
+          <td><%= client.fullname %></td>
+          <td><%= client.date_of_birth %></td>
+          <td><%= client.email %></td>
+         
+        </tr>
+      <% end %>
+
+
+
+
+
+    </tbody>
+  </table>

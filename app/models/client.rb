@@ -16,7 +16,7 @@ validates :firstname, :lastname, presence: {message: "Cant be blank!"}
  end
 
  def date_of_birth
- 	dob.strftime("%d. #{month_names_ge(dob.mon)} %Y").html_safe
+ 	dob.strftime("%d. #{month_names_ge(dob.mon)} %Y").html_safe unless dob.nil?
  end
 
  def gender_class
