@@ -51,9 +51,9 @@
 
 <% end %>
 
-<%= link_to 'Ihre Daten bearbeiten', edit_client_path(@client) %> 
+<%= link_to 'Ihre Daten bearbeiten', edit_client_path(@client), class: "btn btn-primary" %> 
 
 </div>
 <br/>
 
-<%= link_to raw('Zur&uuml;ck'), clients_path %>
+<%= link_to raw('Zur&uuml;ck'), clients_path, class: "btn btn-danger" %>
