@@ -11,15 +11,6 @@
 .rowlink {
 	cursor: pointer;
 }
-.form-group-has-error .form-control,
-.form-group-has-error label {
-		color: #c00;
-}
-
-
-.form-group-has-error .form-control {
-	border-color: #c00;
-}
 
 .table-container {
 	width: 100%;
@@ -28,14 +19,31 @@
 	overflow-y: scroll;
 }
 
+
+
+
+/* Form error*/
+
+
+
+
+.form-group-has-error .form-control,
+.form-group-has-error label,
+.form-group-has-error .input-group-addon {
+		color: #c00;
+}
+
+
+.form-group-has-error .form-control,
+.form-group-has-error .input-group-addon {
+	border-color: #c00;
+}
+
+
+
 .error {
 	color: #c00;
 }
 
-.input-group-addon {
-	color: #c00
-}
 
-.div input-group-addon {
-	color: #c00
-}
+/* ------/Form Error */
