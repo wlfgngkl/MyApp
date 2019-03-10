@@ -1,3 +1,4 @@
+<div class="container">
 <%= form_with(model: car, local: true) do |form| %>
   <% if car.errors.any? %>
     <div id="error_explanation">
@@ -11,27 +12,34 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="row">
+    <div class="form-group col-xs-4">
     <%= form.label :brand %>
-    <%= form.text_field :brand %>
-  </div>
+    <%= form.select :typeof,[["BMW"],["Mercedes"],["Audi"],["Volkswagen"],["Porsche"]],{}, class: "form-control"%>
+    </div>
 
-  <div class="field">
+    <div class="form-group col-xs-4">
     <%= form.label :color %>
-    <%= form.text_field :color %>
+    <%= form.text_field :color, class: "form-control"%>
+    </div>
   </div>
 
-  <div class="field">
+  <div class="row">
+    <div class="form-group col-xs-4">
     <%= form.label :hp %>
-    <%= form.number_field :hp %>
-  </div>
+    <%= form.number_field :hp, class: "form-control"%>
+    </div>
 
-  <div class="field">
+    <div class="form-group col-xs-4">
     <%= form.label :typeof %>
-    <%= form.text_field :typeof %>
+    <%= form.select :typeof,[["Benzin"],["Diesel"]],{}, class: "form-control"%>
+    </div>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <div class="form-group">
+    <input type="submit" value="Send" class="btn btn-success" />
+    </div>
   </div>
 <% end %>
+</div>
