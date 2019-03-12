@@ -3,17 +3,17 @@
 	<div class="MyApp">
 		<h1>Welcome to MyApp</h1>
 	</div>	
+
 	<br>
 	<div class="welcome">
 	<br>
-	<h2 class= "rowlink" data-path="<%=cars_path %>">Fahrzeuge </h2>
-	<%= image_tag("cars.jpg", :alt => "cars") %>
+	<h2>Fahrzeuge </h2>
+	<%= link_to image_tag("cars.jpg", :alt => "cars"), "http://localhost:3000/cars/" %>
 	<br>
 
 
-
 	<br>
-	<h2 class= "rowlink" data-path="<%=clients_path %>">Kunden </h2>
-	<%= image_tag("kunden1.jpg", :alt => "kunden1") %>
+	<h2>Kunden </h2>
+	<%= link_to image_tag("kunden1.jpg", :alt => "kunden1"), "http://localhost:3000/clients" %>
 	</div>
 </div>
