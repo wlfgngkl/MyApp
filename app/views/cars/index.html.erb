@@ -1,35 +1,19 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Cars</h1>
+<div class="container">
+<h1 class= "rowlink" data-path="<%=new_car_path %>" id="addNewCar">Cars</h1>
 
 <div class="table-container">
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th>Marke</th>
-      <th>Farbe</th>
-      <th>PS</th>
-      <th>Kraftstoff</th>
-    </tr>
-  </thead>
-</table>
-
-</div>
-  <tbody>
-    <% @cars.each do |car| %>
-        <tr data-path="/cars/<%= car.id %>" class= "rowlink">
-        <td><%= car.brand %></td>
-        <td><%= car.color %></td>
-        <td><%= car.hp %></td>
-        <td><%= car.typeof %></td>
-        <td><%= link_to 'Show', car, class: "btn btn-warning"%></td>
-        <td><%= link_to 'Edit', edit_car_path(car), class: "btn btn-success" %></td>
-        <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger"%></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<%= render 'tableC' %>
+  </div>
 
 <br>
 
-<%= link_to 'New Car', new_car_path, class: "btn btn-primary" %>
+
+</div>
+<script type="text/javascript">
+  $("#addNewCar").on('mouseover', function(e) {
+    $(this).html("Add new a Car").toggleClass('text-success', true)
+  }).on('mouseleave', function(e) {
+    $(this).html("Cars").toggleClass('text-success', false)
+  })
+</script>

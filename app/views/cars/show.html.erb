@@ -1,8 +1,16 @@
 <p id="notice"><%= notice %></p>
 
+<h2>Auto:</h2>
+
+<div class="container">
 <p>
   <strong>Brand:</strong>
   <%= @car.brand %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @car.model %>
 </p>
 
 <p>
@@ -20,5 +28,9 @@
   <%= @car.typeof %>
 </p>
 
-<%= link_to 'Edit', edit_car_path(@car), class: "btn btn-success" %> |
-<%= link_to 'Back', cars_path, class: "btn btn-danger" %>
+<%= link_to 'Daten bearbeiten', edit_car_path(@car), class: "btn btn-primary" %> 
+
+</div>
+
+<br/>
+<%= link_to raw('Zur&uuml;ck'), cars_path, class: "btn btn-danger" %>
