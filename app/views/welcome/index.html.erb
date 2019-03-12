@@ -1,7 +1,19 @@
 
 <div class= container >
-<h1>Welcome to MyApp</h1>
+	<div class="MyApp">
+		<h1>Welcome to MyApp</h1>
+	</div>	
+	<br>
+	<div class="welcome">
+	<br>
+	<h2 class= "rowlink" data-path="<%=cars_path %>">Fahrzeuge </h2>
+	<%= image_tag("cars.jpg", :alt => "cars") %>
+	<br>
 
-<%= link_to "Fahrzeuge", cars_path, class: "btn btn-primary" %> 
-<%= link_to "Kunden", clients_path, class: "btn btn-success" %> 
+
+
+	<br>
+	<h2 class= "rowlink" data-path="<%=clients_path %>">Kunden </h2>
+	<%= image_tag("kunden1.jpg", :alt => "kunden1") %>
+	</div>
 </div>
