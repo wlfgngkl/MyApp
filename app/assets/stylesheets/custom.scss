@@ -58,6 +58,7 @@
 	min-height: 500px;
 	max-height: 800px;
 	overflow-y: scroll;
+	background-color: #9fc
 }
 
 .MyApp {
@@ -69,7 +70,12 @@ h2 {
 	text-align: right;
 }
 
+.container {
+	background-color: #ccf
+}
 
-
+.container-fluid {
+	background-color: #9fc
+}
 
 /* ----/welcome */
