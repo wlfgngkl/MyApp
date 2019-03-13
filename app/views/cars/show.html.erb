@@ -1,8 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h2>Auto:</h2>
 
 <div class="container">
+
+<h3>Auto:</h3>
 <p>
   <strong>Brand:</strong>
   <%= @car.brand %>
@@ -27,6 +28,8 @@
 <%= link_to 'Daten bearbeiten', edit_car_path(@car), class: "btn btn-primary" %> 
 
 </div>
-
 <br/>
+
 <%= link_to raw('Zur&uuml;ck'), cars_path, class: "btn btn-danger" %>
+
+<%= link_to 'Startseite', "http://localhost:3000/", class: "btn btn-primary"%>
