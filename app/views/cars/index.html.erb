@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
 <div class="container">
 <h1 class= "rowlink" data-path="<%=new_car_path %>" id="addNewCar">Cars</h1>
-
-<div class="table-container">
-<%= render 'tableC' %>
-  </div>
+<input type="text" id="search">
+<div class="table-container" id= "cars_table">
+	<%= render 'table' %>
+</div>
 
 <br>
 
@@ -15,5 +15,28 @@
     $(this).html("Add new a Car").toggleClass('text-success', true)
   }).on('mouseleave', function(e) {
     $(this).html("Cars").toggleClass('text-success', false)
+  })
+
+  $("#search").on('input', function(e) {  //(e) hoert auf 'input' $(#search)=> id search
+  	var sJquery = $(this).val(); // variable fuer den value (inhalt) Jquery
+  	var params ={}
+  	if (sJquery.lenght > 0) {
+  			params ={search: sJquery}
+  	}														 
+  	
+  	$.ajax({										// verbindung server nicht konstant
+  		url: "/cars",							// pfad zum server
+  		method: "GET",						// methode wie wird abgerufen
+  		data: params, 								// was wird abgerufen var?
+  		dataType: "SCRIPT",				// welcher typ => SCRIPT wird abgerufen - 
+  		complete: function (xhr,status,obj) {  // abschluss / rueckgabe
+  		var table= xhr.responseText;
+  		$("#cars_table").html(table);
+  		}
+  	})
+
+
+
+ 
   })
 </script>

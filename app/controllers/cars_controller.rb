@@ -4,7 +4,12 @@ class CarsController < ApplicationController
   # GET /cars
   # GET /cars.json
   def index
-    @cars = Car.all
+    @cars = Car.all.order(updated_at: :desc).limit(20)
+    # sortiert nach "updated_at", absteigend, maximal 20 Datensaetze
+    if params[:search]
+      @cars = Car.search_cars(params[:search])
+      
+    end
   end
 
   # GET /cars/1
@@ -69,6 +74,6 @@ class CarsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def car_params
-      params.require(:car).permit(:brand, :color, :hp, :typeof)
+      params.require(:car).permit(:brand,  :color, :hp, :typeof)
     end
 end

@@ -36,4 +36,4 @@ include Fake
 
 end
 
-fake_data 200
+fake_data 2000

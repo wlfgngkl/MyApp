@@ -1,10 +1,36 @@
 <p id="notice"><%= notice %></p>
-<div class="container">
+
+<div class="container-fluid">
 <h1 class= "rowlink" data-path="<%=new_client_path %>" id="addNewClient">Clients</h1>
 
-<div class="table-container">
-  <%= render 'table' %>
+<div class="row">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<div class="row">
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+				<div class="input-group">
+					<label class="control-label">
+							Search
+					</label>
+					<input type="text" name="search" id="search" class="form-control" value="" />
+				</div>				
+			</div>
+		</div>
+	</div>
 </div>
+
+<div class="row">
+	<div class="col-lg-8 col-lg-offset-2">
+			<div class="container" id="clients_table">
+				<%= render 'table' %>
+			</div>		
+	</div>
+</div>
+
+
+
+
+			  
+
 <br>
 
 
@@ -14,6 +40,26 @@
     $(this).html("Add new Client").toggleClass('text-success', true)
   }).on('mouseleave', function(e) {
     $(this).html("Clients").toggleClass('text-success', false)
+  })
+
+  $("#search").on('input', function(e) { //(e) hoert auf 'input' $(#search)=> id search
+  	var data = {};											// variable fuer den value (inhalt) JScript
+  	if(e.target.value.length > 0) {      //wenn die laenge von dem input groesser 0, 
+                                          //dann data(var).suche = e.target.value (suche nach eingabe)
+  		data.search = e.target.value;
+  	}	
+
+
+  		$.ajax({																// verbindung server nicht konstant
+  			method: "GET",												// methode wie wird abgerufen
+  			url: "/clients",											// pfad zum server
+  			data: data,														// was wird abgerufen
+  			dataType: "SCRIPT",										// welcher typ => SCRIPT wird abgerufen
+  			complete: function(xhr,status, obj) {	// abschluss =>funktion fuer die rueckgabe 																					der angefragten daten
+  				var table= xhr.responseText;
+  				$("#clients_table").html(table);
+  			}
+  		})
   })
 </script>
 

@@ -4,7 +4,12 @@ class ClientsController < ApplicationController
   # GET /clients
   # GET /clients.json
   def index
-    @clients = Client.all
+    @clients = Client.all.order(updated_at: :desc).limit(20)
+    # sortiert nach "updated_at", absteigend, maximal 20 Datensaetze
+    if params[:search]
+      @clients = Client.search_clients(params[:search])
+      
+    end
   end
 
   # GET /clients/1

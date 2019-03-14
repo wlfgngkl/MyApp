@@ -1,4 +1,9 @@
 class Client < ApplicationRecord
+	include PgSearch
+
+pg_search_scope	:search_clients, against: [:lastname,:firstname,:email,:dob],
+			using: :tsearch,
+ 			ranked_by: ":trigram"
 
 validates :firstname, :lastname, presence: {message: "Cant be blank!"}
 

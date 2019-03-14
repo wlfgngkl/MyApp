@@ -2,7 +2,6 @@
   <thead>
     <tr>
       <th>Marke</th>
-      
       <th>Farbe</th>
       <th>PS</th>
       <th>Kraftstoff</th>
@@ -15,7 +14,6 @@
     <% @cars.each do |car| %>
         <tr data-path="/cars/<%= car.id %>" class= "rowlink">
         <td><%= car.brand %></td>
-        
         <td><%= car.color %></td>
         <td><%= car.hp %></td>
         <td><%= car.typeof %></td>
