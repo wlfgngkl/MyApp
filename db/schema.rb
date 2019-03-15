@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_13_125805) do
+ActiveRecord::Schema.define(version: 2019_03_15_102556) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_trgm"
@@ -33,6 +33,15 @@ ActiveRecord::Schema.define(version: 2019_03_13_125805) do
     t.string "email"
     t.string "phone"
     t.text "notifications"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pkmns", force: :cascade do |t|
+    t.string "gen"
+    t.string "name"
+    t.string "typ1"
+    t.string "typ2"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

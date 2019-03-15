@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :pkmns
   resources :cars
   resources :clients
   get 'welcome/index'

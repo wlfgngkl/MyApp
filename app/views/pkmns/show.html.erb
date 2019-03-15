@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="container">
+
+<h3>Pkmn:</h3>
+<p>
+  <strong>Gen:</strong>
+  <%= @pkmn.gen %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pkmn.name %>
+</p>
+
+<p>
+  <strong>Typ1:</strong>
+  <%= @pkmn.typ1 %>
+</p>
+
+<p>
+  <strong>Typ2:</strong>
+  <%= @pkmn.typ2 %>
+</p>
+
+<%= link_to 'Ihre Pkmns bearbeiten', edit_pkmn_path(@pkmn), class: "btn btn-primary" %>
+</div>
+
+
+<%= link_to raw('Zur&uuml;ck'), pkmns_path, class: "btn btn-danger" %>

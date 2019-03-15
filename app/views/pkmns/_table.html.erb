@@ -1,0 +1,23 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Gen</th>
+      <th>Name</th>
+      <th>Typ1</th>
+      <th>Typ2</th>
+      
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pkmns.each do |pkmn| %>
+      <tr data-path="/pkmns/<%= pkmn.id %>" class= "rowlink">
+        <td><%= pkmn.gen %></td>
+        <td><%= pkmn.name %></td>
+        <td><%= pkmn.typ1 %></td>
+        <td><%= pkmn.typ2 %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>

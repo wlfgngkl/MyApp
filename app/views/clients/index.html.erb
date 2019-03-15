@@ -44,8 +44,8 @@
 
   $("#search").on('input', function(e) { //(e) hoert auf 'input' $(#search)=> id search
   	var data = {};											// variable fuer den value (inhalt) JScript
-  	if(e.target.value.length > 0) {      //wenn die laenge von dem input groesser 0, 
-                                          //dann data(var).suche = e.target.value (suche nach eingabe)
+  	if(e.target.value.length > 0) {      //wenn die laenge von input groesser 0, 
+                                          //dann data.search(var data/params[:search] contoller) = e.target.value (suche nach eingabe)
   		data.search = e.target.value;
   	}	
 
@@ -53,13 +53,17 @@
   		$.ajax({																// verbindung server nicht konstant
   			method: "GET",												// methode wie wird abgerufen
   			url: "/clients",											// pfad zum server
-  			data: data,														// was wird abgerufen
+  			data: data,														// was wird abgerufen -- !!var data!!
   			dataType: "SCRIPT",										// welcher typ => SCRIPT wird abgerufen
   			complete: function(xhr,status, obj) {	// abschluss =>funktion fuer die rueckgabe 																					der angefragten daten
   				var table= xhr.responseText;
-  				$("#clients_table").html(table);
+  				$("#clients_table").html(table);    //#clients_table=> id=clients_table (z23)
+                                              // neue table(clients_table) in table gerendert
   			}
   		})
+
+      console.log($.ajax());
+
   })
 </script>
 

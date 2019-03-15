@@ -17,19 +17,19 @@
     $(this).html("Cars").toggleClass('text-success', false)
   })
 
-  $("#search").on('input', function(e) {  //(e) hoert auf 'input' $(#search)=> id search
-  	var sJquery = $(this).val(); // variable fuer den value (inhalt) Jquery
+  $("#search").on('input', function(e) {
+  	var sJquery = $(this).val(); 
   	var params ={}
   	if (sJquery.lenght > 0) {
   			params ={search: sJquery}
-  	}														 
+  	}
   	
-  	$.ajax({										// verbindung server nicht konstant
-  		url: "/cars",							// pfad zum server
-  		method: "GET",						// methode wie wird abgerufen
-  		data: params, 								// was wird abgerufen var?
-  		dataType: "SCRIPT",				// welcher typ => SCRIPT wird abgerufen - 
-  		complete: function (xhr,status,obj) {  // abschluss / rueckgabe
+  	$.ajax({
+  		url: "/cars",
+  		method: "GET",
+  		data: params, 
+  		dataType: "SCRIPT",
+  		complete: function (xhr,status,obj) {
   		var table= xhr.responseText;
   		$("#cars_table").html(table);
   		}

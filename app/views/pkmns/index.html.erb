@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+<h1 class= "rowlink" data-path="<%=new_pkmn_path %>" id="addNewPkmn">Pkmns</h1>
+<input type="text" id="search">
+<div class="table-container" id= "pkmn_table">
+  <%= render 'table' %>
+</div>
+
+<br>
+
+
+</div>
+<script type="text/javascript">
+  $("#addNewPkmn").on('mouseover', function(e) {
+    $(this).html("Add new a Pkmn").toggleClass('text-success', true)
+  }).on('mouseleave', function(e) {
+    $(this).html("Pkmns").toggleClass('text-success', false)
+  })
+
+  $("#search").on('input', function(e) {
+    var sJquery = $(this).val(); 
+    var pkmn ={}
+    if (sJquery.lenght > 0) {
+        pkmn ={search: sJquery}
+    }
+    
+    $.ajax({
+      url: "/pkmns",
+      method: "GET",
+      data: params, 
+      dataType: "SCRIPT",
+      complete: function (xhr,status,obj) {
+      var table= xhr.responseText;
+      $("#pkmn_table").html(table);
+      }
+    })
